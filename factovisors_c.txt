@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() 
+{
+    long long int n, i, d;
+    unsigned long long fact=1;
+    
+    scanf("%lld %lld", &n,&d);
+    
+    for (i=1;i<=n;++i) 
+    {
+        fact*= i;
+    }
+
+    printf("Factorial of %lld = %llu",n,fact);
+    
+    if(fact%d==0)
+    {
+        printf("%lld divides %lld!",d,n);
+    }
+    else
+    {
+        printf("%lld does not divide %lld!",d,n);
+    }
+    return 0;
+}
